@@ -15,57 +15,6 @@ a
     list-style: none
     padding: 0
     
-// nav
-//     background-color: var.$g
-//     margin: 0px
-//     padding: 20px
-//     display: flex
-//     justify-content: center
-//     align-items: center
-//     font-size: 15pt
-
-// nav ul
-//     list-style-type: none
-//     height: 32px
-//     display: flex
-
-// nav ul li
-//     margin-right: 10px
-
-// nav ul li h1
-//     color: white
-//     padding: 5px 30px
-//     line-height: 30px
-//     cursor: pointer
-
-// nav ul li h1+div
-//     display: flex
-//     flex-direction: column
-//     background-color: #3B3B3B
-//     padding: 10px
-//     transform: translateY(-110%)
-//     opacity: 0
-//     transition: .5s
-//     transform-origin: top
-
-// nav ul li:hover div
-//     transform: translateY(0)
-//     opacity: 1
-//     color: var.$w
-
-// nav ul li h1+div a
-//     color: white
-//     text-decoration: none
-//     padding: 5px 0
-
-
-// .navigasi
-//     justify-content: center
-//     background-color: var.$g
-//     left: 0
-//     right: 0
-//     top: 0
-//     display: flex
 nav
     position: fixed
     z-index: 1000
@@ -91,25 +40,15 @@ nav
   text-decoration: none
   font-size: 20px
   
-
-
-
-/* Add an active class to highlight the current page */
-
-
-
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon 
   display: none
 
 
-/* Dropdown container - needed to position the dropdown content */
 .dropdown 
   float: left
   cursor: pointer
   transition: all .5s ease
 
-/* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn 
     font-size: 20px
     border: none
@@ -122,7 +61,6 @@ nav
     margin: 0
 
 
-// imageeee
 .dropbtn 
     img
         color: white
@@ -137,7 +75,6 @@ nav
 
 
 
-/* Style the dropdown content (hidden by default) */
 .dropdown-content 
   position: fixed
   background-color: #f9f9f9
@@ -154,7 +91,6 @@ nav
     
 
 
-/* Style the links inside the dropdown */
 .dropdown-content a 
   float: none
   color: black
@@ -164,25 +100,21 @@ nav
   text-align: left
 
 
-/* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn 
   background-color: #555
   color: white
 
 
-/* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover 
   background-color: #ddd
   color: black
 
 
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
 .dropdown:hover .dropdown-content
   opacity: 1
   display: block
 
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) 
     .topnav a:not(:first-child), .dropdown .dropbtn 
         display: none
@@ -200,7 +132,6 @@ nav
   
 
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) 
     .topnav.responsive 
         position: relative
@@ -249,32 +180,13 @@ a:hover
     display: flex
 
     .text-headline
-        font-size: 35pt
         display: flex
         color: var.$w
         padding-top: 250px
         padding-bottom: 150px
         justify-content: center
         font-size: 9em
-        
-        // .bryan-headline
-        //     position: absolute
-        //     background-color: var.$g
-        //     background-size: none
-        //     padding-right: 45px
-        //     padding-left: 45px
-        //     padding-top: 0px
-        //     padding-bottom: 0px
-
-        // .port-headline
-        //     opacity: 50%
-        //     padding-right: 200px
-        //     padding-left: 50px
-        // .folio-headline
-        //     opacity: 50%
-        //     padding-right: 0px
-        //     padding-left: 300px    
-
+   
 button
     display: flex
     border: none
@@ -290,9 +202,6 @@ button
         height: 8vh
         justify-content: center
         padding-top: 1vw
-
-
-
 
 
 // section1
@@ -477,29 +386,12 @@ button
         a:hover
             text-decoration: underline
         
-
-
-
-
 .line2
     background-color: var.$g
     width: 1vw
     height: 19.5vw
     position: absolute
     margin-left: 49%
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section-45
     justify-content: center
@@ -509,17 +401,10 @@ button
     padding-top: 65px
     padding-bottom: 15px
 
-
-
-
-
-
-
 // Character
 .character-all
     display: flex
     
-
 .character h1
     font-size: 50pt
     writing-mode: vertical-rl
@@ -536,7 +421,6 @@ button
     padding-top: 70px
     padding-bottom: 70px
 
-
 .character-image
     background-color: var.$gb
     width: 100%
@@ -550,18 +434,7 @@ button
         height: 22vw
         transition: 0.5s
 
-
-
-
-
-
-
-
-
-
-
 // modelling
-
 .section-6
     padding-top: 100px
 .modelling h1
@@ -583,7 +456,6 @@ button
 .modelling-all
     display: flex
 
-
 .modelling-image
     background-color: var.$gb
     width: 100%
@@ -598,9 +470,7 @@ button
         height: 22vw
         transition: 0.5s
 
-
 // another
-
 .section-7
     padding-top: 100px
 .another h1
@@ -622,7 +492,6 @@ button
 .another-all
     display: flex
 
-
 .another-image
     background-color: var.$gb
     width: 100%
@@ -637,109 +506,10 @@ button
         height: 22vw
         transition: 0.5s
 
-
-
-
-
-// .section-4
-//     padding-bottom: 100px
-// .contact
-//     justify-content: center
-//     font-size: 50pt
-//     color: var.$gb
-//     display: flex
-//     padding-top: 65px
-//     padding-bottom: 15px
-// .contact-all
-//     background-color: var.$gb
-//     width: 100%
-//     padding: 50px
-//     font-size: 25pt
-//     color: var.$w
-//     font-size: 25pt
-
-//     .contact-info-line1
-//         display: flex
-//         padding: 40px
-//         justify-content: center
-//         align-items: center
-        
-//         img
-//             width: 30%
-//             padding: 10px
-//         a
-//             text-decoration: none
-//             color: var.$w
-//         a:hover
-//             text-decoration: underline
-
-
-
-//     .contact-info-line2
-//         display: flex
-//         padding: 40px
-//         justify-content: center
-//         align-items: center
-//         padding-top: 80px
-//         img
-//             width: 30%
-//             padding: 10px
-//         a
-//             text-decoration: none
-//             color: var.$w
-//         a:hover
-//             text-decoration: underline
-
-
-// .contact-gmail
-//     a
-//         display: flex
-//         flex-direction: column
-//         justify-content: center
-//         align-items: center
-
-// .contact-wa
-//     a
-//         display: flex
-//         flex-direction: column
-//         justify-content: center
-//         align-items: center
-
-
-// .contact-instagram
-//     a
-//         display: flex
-//         flex-direction: column
-//         justify-content: center
-//         align-items: center
-
-
-// .contact-facebook
-//     a
-//         display: flex
-//         flex-direction: column
-//         justify-content: center
-//         align-items: center
-
-
-// .contact-behance
-//     a
-//         display: flex
-//         flex-direction: column
-//         justify-content: center
-//         align-items: center
-
-// .contact-twitter
-//     a
-//         display: flex
-//         flex-direction: column
-//         justify-content: center
-//         align-items: center
-
-
 // section4
 .section-4
     padding-bottom: 100px
+    
 .contact
     justify-content: center
     font-size: 50pt
@@ -747,11 +517,11 @@ button
     display: flex
     padding-top: 65px
     padding-bottom: 15px
+    
 .contact-all
     display: flex
     background-color: var.$gb
     width: 100%
-
 
 .contact-info
     padding: 50px
@@ -786,8 +556,6 @@ button
         width: 150px
     img:hover
         background-color: var.$g
-
-
 
 // section8
 .section-8
@@ -826,7 +594,6 @@ button
         align-items: center
 
 .thanks-text 
-    
     padding: 220px
     padding-top: 60px
     padding-bottom: 0px
@@ -837,7 +604,6 @@ button
     flex-direction: column
     font-size: 20pt
     text-align: center
-    
     h2
         display: flex
         justify-content: center
@@ -846,7 +612,6 @@ button
         text-align: center
         padding: 25px
 
-
 .copyright
     h1
         display: flex
@@ -854,29 +619,6 @@ button
         align-items: center
         font-size: 15pt
         padding-top: 180px
-
-    
-
-// .little-home-menu
-//     display: flex
-//     flex-direction: column
-//     height: 12vw
-//     width: 8vw
-//     position: fixed
-//     margin-top: 25vw
-//     background-color: #3B3B3B
-//     justify-content: center
-//     align-items: center
-//     margin-left: 90vw
-//     border-radius: 1vw
-//     z-index: 2
-//     a
-//         text-decoration: none
-//         text-align: right
-//         padding: 10px
-//         color: var.$w
-// .little-home-menu a:hover
-//     color: var.$g
     
 .headline
     background-color: var.$gb
@@ -912,7 +654,6 @@ button
     padding-right: 70px
     padding-left: 330px
 
-
 .bryan-headline
     position: absolute
     background-color: var.$g
@@ -941,27 +682,6 @@ button
 
 
 
-// .skill h1
-//     display: flex
-//     justify-content: center
-//     font-size: 50pt
-//     color: var.$gb
-
-// .skill-bg
-//     background-color: var.$gb
-//     height: 35vh
-//     .skill-img
-//         background-color: var.$g
-//         height: 5vh
-//         justify-content: center
-//         align-items: center
-//         img
-//             height: 15vh
-//             padding-top: 70px
-//             padding-bottom: 70px
-//             padding-left: 150px
-//             justify-items: center
-            
 
 
 
