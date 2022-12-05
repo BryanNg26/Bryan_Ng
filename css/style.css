@@ -1,0 +1,785 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  list-style: none;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 22px 30px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Add an active class to highlight the current page */
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  padding-left: 40px;
+  padding-right: 25px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropbtn img {
+  color: white;
+  padding-top: 19px;
+  padding-bottom: 18px;
+  padding-left: 8px;
+  padding-right: 7px;
+  top: 0;
+  bottom: 0;
+  width: 41px;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 64px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  display: none;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 17px 65px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content {
+    display: none;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+.menu {
+  display: flex;
+}
+.menu a {
+  padding: 30px;
+  font-size: 20pt;
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.headline {
+  background-color: #525252;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+.headline .text-headline {
+  font-size: 35pt;
+  display: flex;
+  color: #fff;
+  padding-top: 250px;
+  padding-bottom: 150px;
+  justify-content: center;
+  font-size: 9em;
+}
+
+button {
+  display: flex;
+  border: none;
+  font-size: 15pt;
+  justify-content: center;
+  align-items: center;
+  background: border-box;
+  color: #fff;
+  margin-left: 50%;
+}
+
+.button-headline img {
+  height: 8vh;
+  justify-content: center;
+  padding-top: 1vw;
+}
+
+.about h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50pt;
+  color: #525252;
+  padding-top: 65px;
+  padding-bottom: 15px;
+}
+
+.about-info {
+  background-color: #525252;
+  color: white;
+  display: flex;
+}
+.about-info .about-info-me {
+  padding-top: 0px;
+  padding-left: 150px;
+  padding-right: 0px;
+  padding-bottom: 40px;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+.about-info .about-info-me h1 {
+  font-size: 50pt;
+  padding: 30px 0;
+}
+.about-info .about-info-me p {
+  font-size: 20pt;
+  padding: 15px 0;
+  padding-right: 112px;
+  font-family: century gothic;
+}
+.about-info .about-info-pic {
+  padding: 150px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 0px;
+}
+.about-info .about-info-pic img {
+  display: flex;
+  height: 55vh;
+  justify-content: center;
+}
+
+.skill h1 {
+  justify-content: center;
+  font-size: 50pt;
+  color: #525252;
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 15px;
+}
+
+.line {
+  background-color: #747474;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  margin-top: 90px;
+}
+
+.sec_swpr {
+  background-color: #525252;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(image/Rectangle 74);
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 230px;
+  height: 230px;
+  filter: grayscale(1px);
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.swiper-slide-active {
+  filter: grayscale(0px);
+  loop: true;
+}
+
+.edu {
+  display: flex;
+  flex-direction: row;
+}
+.edu .edu-headline h1 {
+  justify-content: center;
+  font-size: 50pt;
+  color: #525252;
+  padding-left: 200px;
+  padding-top: 65px;
+  padding-bottom: 15px;
+}
+.edu .edu-headline2 h1 {
+  justify-content: center;
+  font-size: 50pt;
+  color: #525252;
+  padding-left: 370px;
+  padding-top: 65px;
+  padding-bottom: 15px;
+  padding-right: 100px;
+}
+
+.edu-all {
+  display: flex;
+  background-color: #525252;
+  color: #fff;
+  font-size: 20pt;
+  height: 19.5vw;
+}
+
+.edu-only {
+  display: flex;
+  padding-left: 100px;
+  width: 50%;
+}
+.edu-only .edu-date {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  padding-left: 20px;
+  font-family: century gothic;
+}
+.edu-only .edu-date h2 {
+  padding-top: 45px;
+}
+.edu-only .edu-info {
+  padding: 80px;
+  font-family: century gothic;
+}
+.edu-only .edu-info p {
+  opacity: 80%;
+  font-size: 15pt;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.edu-only .edu-info a {
+  color: white;
+  text-decoration: none;
+}
+.edu-only .edu-info a:hover {
+  text-decoration: underline;
+}
+
+.career-only {
+  display: flex;
+  color: #fff;
+  width: 50%;
+  padding-right: 100px;
+}
+.career-only .career-date {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  padding-left: 100px;
+  font-family: century gothic;
+}
+.career-only .career-info {
+  padding: 80px;
+  font-family: century gothic;
+}
+.career-only .career-info a {
+  text-decoration: none;
+  color: white;
+}
+.career-only .career-info ul {
+  padding-left: 20px;
+}
+.career-only .career-info ul li {
+  opacity: 80%;
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 15pt;
+  padding-top: 5px;
+}
+.career-only .career-info a:hover {
+  text-decoration: underline;
+}
+
+.line2 {
+  background-color: #747474;
+  width: 1vw;
+  height: 19.5vw;
+  position: absolute;
+  margin-left: 49%;
+}
+
+.section-45 {
+  justify-content: center;
+  font-size: 50pt;
+  color: #525252;
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 15px;
+}
+
+.character-all {
+  display: flex;
+}
+
+.character h1 {
+  font-size: 50pt;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.character {
+  padding: 50px;
+  background-color: #747474;
+  width: 188px;
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.character-image {
+  background-color: #525252;
+  width: 100%;
+  margin: 0;
+}
+.character-image img {
+  height: 35vh;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.character-image img:hover {
+  height: 22vw;
+  transition: 0.5s;
+}
+
+.section-6 {
+  padding-top: 100px;
+}
+
+.modelling h1 {
+  font-size: 50pt;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.modelling {
+  padding: 50px;
+  background-color: #747474;
+  width: 188px;
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.modelling-all {
+  display: flex;
+}
+
+.modelling-image {
+  background-color: #525252;
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+.modelling-image img {
+  height: 35vh;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.modelling-image img:hover {
+  height: 22vw;
+  transition: 0.5s;
+}
+
+.section-7 {
+  padding-top: 100px;
+}
+
+.another h1 {
+  font-size: 50pt;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.another {
+  padding: 50px;
+  background-color: #747474;
+  width: 188px;
+  display: flex;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.another-all {
+  display: flex;
+}
+
+.another-image {
+  background-color: #525252;
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+.another-image img {
+  height: 35vh;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.another-image img:hover {
+  height: 22vw;
+  transition: 0.5s;
+}
+
+.section-4 {
+  padding-bottom: 100px;
+}
+
+.contact {
+  justify-content: center;
+  font-size: 50pt;
+  color: #525252;
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 15px;
+}
+
+.contact-all {
+  display: flex;
+  background-color: #525252;
+  width: 100%;
+}
+
+.contact-info {
+  padding: 50px;
+  padding-left: 150px;
+  padding-right: 0;
+  font-size: 25pt;
+  color: #fff;
+  font-family: century gothic;
+  display: flex;
+  align-items: center;
+}
+.contact-info div h1 {
+  padding: 10px;
+}
+
+.contact-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-left: 120px;
+}
+
+.contact-image1 img {
+  padding: 20px;
+  width: 150px;
+}
+.contact-image1 img:hover {
+  background-color: #747474;
+}
+
+.contact-image2 img {
+  padding: 20px;
+  width: 150px;
+}
+.contact-image2 img:hover {
+  background-color: #747474;
+}
+
+.section-8 {
+  background-color: #525252;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.bg-sec8 {
+  position: absolute;
+  z-index: 1;
+  background-image: url(../image/BG_FOOTER.png);
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  background-position: center;
+}
+
+.bgcolor-sec8 {
+  background-color: #525252;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.sec8-dt {
+  position: absolute;
+  z-index: 2;
+}
+
+.thanks {
+  font-size: 100pt;
+  padding-top: 200px;
+}
+.thanks h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks-text {
+  padding: 220px;
+  padding-top: 60px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20pt;
+  text-align: center;
+}
+.thanks-text h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20pt;
+  text-align: center;
+  padding: 25px;
+}
+
+.copyright h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15pt;
+  padding-top: 180px;
+}
+
+.headline {
+  background-color: #525252;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.headline-bg-1 {
+  position: absolute;
+  z-index: 1;
+  background-image: url(../image/Nilouubg.png);
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  background-position: center;
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.headline-bg-color {
+  background-color: #525252;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.headline-dt {
+  position: absolute;
+  z-index: 2;
+}
+
+.folio-headline {
+  padding-right: 70px;
+  padding-left: 330px;
+}
+
+.bryan-headline {
+  position: absolute;
+  background-color: #747474;
+  background-size: none;
+  padding-right: 45px;
+  padding-left: 45px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.port-headline {
+  opacity: 50%;
+  padding-right: 200px;
+  padding-left: 105px;
+}
+
+.folio-headline {
+  opacity: 50%;
+  padding-right: 70px;
+  padding-left: 330px;
+}
+
+/*# sourceMappingURL=style.css.map */
